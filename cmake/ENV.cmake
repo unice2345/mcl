@@ -11,7 +11,10 @@ elseif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
     add_definitions("-DMCL_OS_FREE_BSD")
 
 elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
-    add_definitions("-DMCL_OS_WINDOWS")   
+    add_definitions("-DMCL_OS_WINDOWS")
+
+elseif (CMAKE_SYSTEM_NAME MATCHES "CYGWIN")
+    add_definitions("-DMCL_OS_LINUX")
 
 else ()
     message(FATAL_ERROR "Unsuport os platform: ${CMAKE_SYSTEM_NAME}")

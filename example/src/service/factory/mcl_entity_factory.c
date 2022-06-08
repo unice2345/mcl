@@ -7,7 +7,8 @@
 #include "mcl/assert.h"
 
 ///////////////////////////////////////////////////////////
-MCL_PRIVATE const MclSize MCL_ENTITY_CAPACITY = 16;
+// MCL_PRIVATE const MclSize MCL_ENTITY_CAPACITY = 16;
+#define MCL_ENTITY_CAPACITY 16
 
 MCL_ALLOCATOR_TYPE_DEF(MclEntityAllocator, MclEntity, MCL_ENTITY_CAPACITY);
 

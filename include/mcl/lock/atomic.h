@@ -5,7 +5,8 @@
 
 MCL_STDC_BEGIN
 
-typedef volatile MclSize MclAtomic;
+// typedef volatile MclSize MclAtomic;
+typedef MclSize MclAtomic; // [TODO] work around compile error temporarily
 
 MCL_INLINE void MclAtomic_Clear(MclAtomic *self) {
 	__sync_lock_release(self);

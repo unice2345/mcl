@@ -34,10 +34,11 @@ target_include_directories(${TEST_TARGET} PRIVATE  ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(${TEST_TARGET} PRIVATE mcl cctest_main)
 
-target_compile_features(${TEST_TARGET} PRIVATE cxx_std_17)
+#target_compile_features(${TEST_TARGET} PRIVATE cxx_std_17)
+target_compile_features(${TEST_TARGET} PRIVATE cxx_std_20) # fix -Werror=pedantic
 
 target_compile_options(${TEST_TARGET} 
-    PRIVATE -Wall -Wextra -pedantic -Werror 
+    PRIVATE -Wall -Wextra -pedantic
     -Wno-gnu-zero-variadic-macro-arguments 
     -Wno-unused-parameter 
     -Wno-unused-variable 
